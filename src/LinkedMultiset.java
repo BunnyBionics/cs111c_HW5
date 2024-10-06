@@ -171,23 +171,6 @@ public class LinkedMultiset<T> implements Multiset<T> {
 	}
 	
 	public int removeAll(T element) {
-		/* The method takes a value in as a parameter and removes all occurrences of that value. The method
-		returns a count of how many elements were removed. The method header is:
-    Review the notes at the beginning of the homework about avoiding methods that result in nested loops.
-    Invoking a method that loops through the chain from inside of a loop of the chain results in a nested loop.
-    Node current = head;
-	while(current!=null) {
-			if(current.data.equals(element)) {
-				current.data = head.data;
-				head = head.next;
-				size--;
-				return true;
-			} else {
-				current = current.next;
-			}
-		}
-		return false;
-*/
 		int count = 0;
 		Node currentNode = head;
 		while (currentNode != null) {

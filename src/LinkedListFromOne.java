@@ -297,12 +297,6 @@ public class LinkedListFromOne<T extends Comparable<? super T>> implements ListF
 	}
 
 	public void addAll(T[] items) {
-/*
-Write an addAll method for the LinkedListFromOne class.
-The method adds an array of items (in order) to the end of the current list.
-    Review the notes at the beginning of the homework about avoiding methods that result in nested loops.
-    Invoking a method that loops through the chain from inside of a loop of the chain results in a nested loop.
-*/
 		if (items.length == 0) {
 			return;
 		}

@@ -30,8 +30,22 @@ public class HomeworkM5Driver {
 
 
 	public static boolean isDoublyLinkedPalindromeList(DoubleNode<Integer> firstNode, DoubleNode<Integer> lastNode)  	{
-		// YOUR CODE HERE
-		return true; // placeholder code: replace with your own statement
+		if (firstNode == null || lastNode == null) {
+			return true;
+		}
+
+		DoubleNode<Integer> frontNode = firstNode;
+		DoubleNode<Integer> backNode = lastNode;
+		while (frontNode.next != null && backNode.previous != null) {
+			if (!frontNode.data.equals(backNode.data)) {
+				return false;
+			}
+
+			frontNode = frontNode.next;
+			backNode = backNode.previous;
+		}
+
+		return true;
 	}
 
 
